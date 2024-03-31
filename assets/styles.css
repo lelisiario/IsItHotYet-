@@ -1,0 +1,30 @@
+* {
+margin: 5px;
+padding: 5px;
+box-sizing: border-box;
+font-family: 'sans-serif';
+
+}
+
+  h1 {
+    text-align: center;
+    background: rgb(156,246,246);
+    background: radial-gradient(circle, rgba(156,246,246,1) 35%, rgba(243,201,139,1) 100%);
+    color: #131111;
+    padding: 18px 0;
+    font-style: italic;
+    font-size: 1.75rem;
+    font-weight: 900;
+  }
+
+  body {
+    background: #F7EEDD;
+
+  }
+
+  #weather {
+    display: flex;
+    gap: 35px;
+    padding: 30px;
+    background: #9cf6f6;
+  }
