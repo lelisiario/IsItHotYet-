@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dash</title>
-    <link href="https://cdn.jsdelivr.net/npm/beercss@3.5.1/dist/cdn/beer.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/beercss@3.5.1/dist/cdn/beer.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="dash"></section>
+          <h1>Weather Dashboard</h1>
+        <section class="cityName"></section>
+          <h2>Enter a city name</h2>
+          <!-- Form input field for searching cities -->
+          <input id="search-city" placeholder="i.e. Cancun, Tokyo, London" />
+          <button id="search-btn">Search</button>
+          <div class="separator"></div>
+          <button class="location-btn">Use Current Location</button>
+          <!-- Container to display search history -->
+          <section id="searchHistory">
+          </section>
+        </section>
+          <!-- Container to display current weather conditions -->
+          <section id="weather"></section>
+        </div>
+          <!-- Container to display forecast for the next 5 days -->
+          <section id="forecast"></section>
+        </div>
+    </main>
 
-</head>
-<body>
-  <h1> Weather Dashboard</h1>
-<!-- Form input field for searching cities -->
-<h2>Enter a city name </h2>
-    <input id="search-city" placeholder="i.e. Cancun, Tokyo, London" />  
-    <button id="search-btn">Search</button>
-    <div class="separator"></div>
-    <button class="location-btn"> Use Current Location</button> 
-    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" 
-  integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
-  crossorigin="anonymous"></script>
-   <script src="./assets/script.js"> </script>
-  
-
-
-<!-- Container to display current weather conditions -->
-<section id="weather">
-  <!-- Current weather information will be displayed here -->
-</section>
-
-<!-- Container to display forecast for the next 5 days -->
-<section id="forecast">
-  <!-- Forecast for the next 5 days will be displayed here -->
-</section>
-
-<!-- Container to display search history -->
-<section id="searchHistory">
-  <!-- Search history will be displayed here -->
-</section>
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>

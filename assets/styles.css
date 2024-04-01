@@ -9,7 +9,7 @@ font-family: 'sans-serif';
   h1 {
     text-align: center;
     background: rgb(156,246,246);
-    background: radial-gradient(circle, rgba(156,246,246,1) 35%, rgba(243,201,139,1) 100%);
+    background: radial-gradient(circle, rgba(156,246,246,1) 6%, rgba(247,238,221,1) 100%);
     color: #131111;
     padding: 18px 0;
     font-style: italic;
@@ -18,13 +18,66 @@ font-family: 'sans-serif';
   }
 
   body {
-    background: #F7EEDD;
+    background: #EEF8FC;
 
   }
 
-  #weather {
+.dash {
     display: flex;
-    gap: 35px;
-    padding: 30px;
+    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+  #weather {
     background: #9cf6f6;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+#search-city {
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+  #search-btn {
+    background: #605F5E;
+    color: #fcf3f3;
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+  .location-btn {
+    background: #605F5E;
+    color: #fcf7f7;
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+
+
+  @media (max-width: 800px) {
+    #weather {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    /* Adjust styles for child elements if needed */
+    #weather > * {
+      width: 100%; /* Make child elements take full width */
+    }
   }

@@ -99,3 +99,5 @@ document.querySelector("#search-city").addEventListener("keypress", function(eve
     handleSearchBtn();
   }
 });
+
+//New section for local storage.
