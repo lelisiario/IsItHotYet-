@@ -100,4 +100,51 @@ document.querySelector("#search-city").addEventListener("keypress", function(eve
   }
 });
 
-//New section for local storage.
+// New Section for local storage
+
+
+// Function to handle search button click
+function handleSearchBtn() {
+  const city = document.querySelector("#search-city").value.trim();
+  if (!city) {
+    return;
+  }
+  // Save the searched city to local storage
+  saveSearch(city);
+  // Fetch weather data for the searched city
+  fetchWeather(city);
+}
+
+// Function to save search to local storage
+function saveSearch(city) {
+  let searches = JSON.parse(localStorage.getItem("searches")) || [];
+  // Add the new search to the beginning of the array
+  searches.unshift(city);
+  // Limit the number of saved searches to, for example, 5
+  const maxSearches = 5;
+  searches = searches.slice(0, maxSearches);
+  // Save the updated searches back to local storage
+  localStorage.setItem("searches", JSON.stringify(searches));
+  // Display the updated search history
+  displaySearchHistory();
+}
+
+// Function to display recent searches
+function displaySearchHistory() {
+  const searchHistoryEl = document.querySelector("#searchHistory ul");
+  searchHistoryEl.innerHTML = "";
+  const searches = JSON.parse(localStorage.getItem("searches")) || [];
+  // Loop through the saved searches and create list items to display them
+  searches.forEach((city) => {
+    const button = document.createElement("button");
+    button.textContent = city;
+    // Add event listener to each list item to fetch weather data when clicked
+    button.addEventListener("click", () => {
+      fetchWeather(city);
+    });
+    searchHistoryEl.appendChild(button);
+  });
+}
+
+// Call the displaySearchHistory function when the page loads to show recent searches
+window.addEventListener("load", displaySearchHistory);

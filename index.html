@@ -12,25 +12,34 @@
   </head>
   <body>
     <main>
-      <section class="dash"></section>
+      <section class="dash">
+        <div class="header">
           <h1>Weather Dashboard</h1>
-        <section class="cityName"></section>
+          </div>
+        <div>
+          <section class="cityName"></section>
           <h2>Enter a city name</h2>
           <!-- Form input field for searching cities -->
           <input id="search-city" placeholder="i.e. Cancun, Tokyo, London" />
           <button id="search-btn">Search</button>
           <div class="separator"></div>
           <button class="location-btn">Use Current Location</button>
+        </div>
+        <div>
+      </section>
+      
+        <!-- Container to display current weather conditions -->
+        <section id="weather"></section>
+
           <!-- Container to display search history -->
-          <section id="searchHistory">
-          </section>
-        </section>
-          <!-- Container to display current weather conditions -->
-          <section id="weather"></section>
-        </div>
-          <!-- Container to display forecast for the next 5 days -->
-          <section id="forecast"></section>
-        </div>
+      <section id="searchHistory">
+        <h2>Recent Searches</h2>
+        <ul></ul>
+      </section>
+
+        <!-- Container to display forecast for the next 5 days -->
+        <section id="forecast"></section>
+
     </main>
 
     <script

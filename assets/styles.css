@@ -6,7 +6,7 @@ font-family: 'sans-serif';
 
 }
 
-  h1 {
+  .header {
     text-align: center;
     background: rgb(156,246,246);
     background: radial-gradient(circle, rgba(156,246,246,1) 6%, rgba(247,238,221,1) 100%);
@@ -15,6 +15,7 @@ font-family: 'sans-serif';
     font-style: italic;
     font-size: 1.75rem;
     font-weight: 900;
+    width: 100%;
   }
 
   body {
@@ -40,6 +41,14 @@ font-family: 'sans-serif';
   }
 
 #search-city {
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+#searchHistory {
     margin-right: auto;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
