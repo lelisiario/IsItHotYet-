@@ -14,6 +14,8 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
+You want to check the weather in your area without the annoying ads? Are you going on a trip and want to know what the weather is like in the destination? This app is for you! Give it a shot!
+
 ![Screencap of Weather Dashboard] (./assets/images/WeatherDashboard.png)
 Link to Repo: https://github.com/lelisiario/IsItHotYet-
 Link to deployed site: https://lelisiario.github.io/IsItHotYet-/
